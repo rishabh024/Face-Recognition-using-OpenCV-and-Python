@@ -26,7 +26,13 @@ while True:
         labelPredicted, conf = recognizer.predict(grayFrame[y:y + h, x:x + w])
         cv2.rectangle(frame, (x - 50, y - 50), (x + w + 50, y + h + 50), (225, 0, 0), 2)
 
-
+        # now, name of the person is displayed on the screen whose face is recognised
+        if (labelPredicted == 2):
+            labelPredicted = 'Ram'
+        elif (labelPredicted == 1):
+            labelPredicted = 'Rishabh'
+        elif (labelPredicted == 3):
+            labelPredicted = 'Dharmesh'
 
 
 
