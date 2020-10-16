@@ -35,8 +35,10 @@ def getFacesAndLabels(datapath):
         # now, faces are detected by using detectMultiScale() method
         faces = faceClassifier.detectMultiScale(image)
 
-
-
+        # if the face is detected, append the face to images and append the label to labels
+        for (x, y, w, h) in faces:
+            images.append(image[y: y + h, x: x + w])
+            labels.append(label)
 
 
 
