@@ -17,7 +17,7 @@ while True:
     # camera.read() will return the boolean value. If frame is read correctly, then this method will return True, otherwise False.
     retBoolean, frame = camera.read()
 
-    # color of frame is converted to gray color by using COLOR_BGR2GRAY property
+    # color of frame is converted to the gray color by using COLOR_BGR2GRAY property
     grayFrame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     # now, faces are detected by using detectMultiScale() method and stored in the faces variable
