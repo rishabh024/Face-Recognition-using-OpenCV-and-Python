@@ -12,9 +12,12 @@ faceClassifier = cv2.CascadeClassifier(projectPath + '/haarcascade_frontalface_d
 
 camera = cv2.VideoCapture(0)
 
+while True:
+    # camera is used to capture the frames for recognition purpose
+    retBoolean, frame = camera.read()
 
-
-
+    # color of frame is converted to gray color by using COLOR_BGR2GRAY property
+    grayFrame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
 
 
