@@ -9,3 +9,8 @@ projectPath = os.path.dirname(os.path.abspath(__file__))
 # LBPH (Local Binary Pattern Histogram) algorithm is used to recognize the faces
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 cascadePath = projectPath + '/haarcascade_frontalface_default.xml'
+
+faceClassifier = cv2.CascadeClassifier(cascadePath)
+dataPath = projectPath + '/trainingDataset'
+
+def getFacesAndLabels(datapath):
