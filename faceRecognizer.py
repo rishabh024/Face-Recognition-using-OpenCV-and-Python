@@ -34,10 +34,9 @@ while True:
         elif (labelPredicted == 3):
             labelPredicted = 'Dharmesh'
 
+        # putText() method is used to show the name of person whose face is recognised
+        cv2.putText(frame, str(labelPredicted), (x, y + h), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 255, 0), 1)
 
-
-
-
-
-
-
+        # imshow() method is used to display the image in a window
+        cv2.imshow('frame', frame)
+        cv2.waitKey(10)
