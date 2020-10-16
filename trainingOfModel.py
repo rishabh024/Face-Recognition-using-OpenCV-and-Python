@@ -28,7 +28,9 @@ def getFacesAndLabels(datapath):
         # gray-scale image is converted into the numpy array
         image = np.array(grayScaleImageUsingPIL, 'uint8')
 
-
+        # now, the label of the image is extracted
+        label = int(os.path.split(image_path)[1].split(".")[0].replace("face-", ""))
+        print('Label-' + str(label))
 
 
 
