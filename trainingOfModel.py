@@ -22,10 +22,11 @@ def getFacesAndLabels(datapath):
 
     for image_path in imagePaths:
 
-        # read the image from the dataset and convert it to the grayscale image using mode "L" and return the converted copy of this image
+        # read the image from the dataset and convert it to the gray-scale image using mode "L" and return the converted copy of this image
         grayScaleImageUsingPIL = Image.open(image_path).convert('L')
 
-
+        # gray-scale image is converted into the numpy array
+        image = np.array(grayScaleImageUsingPIL, 'uint8')
 
 
 
