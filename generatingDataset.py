@@ -33,3 +33,5 @@ while True:
         # putText() method is used to show the number of images taken for the training dataset
         cv2.putText(frame, 'img-' + str(count), (x, y + h), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 255, 0), 1)
 
+        # imshow() method is used to show the frames in the window
+        cv2.imshow('frame', frame[y - size: y + h + size, x - size: x + w + size])
