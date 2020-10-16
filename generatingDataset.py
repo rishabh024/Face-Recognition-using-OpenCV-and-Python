@@ -12,3 +12,6 @@ name = input('enter your id')
 camera = cv2.VideoCapture(0)
 
 while True:
+    # camera is used to capture/read the images or frames
+    # camera.read() will return the boolean value. If frame is read correctly, then this method will return True, otherwise False.
+    retBoolean, frame = camera.read()
