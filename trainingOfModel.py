@@ -46,7 +46,8 @@ def getFacesAndLabels(datapath):
 
     return images, labels  # return the image list and label list
 
-
+images, labels = getFacesAndLabels(dataPath)
+recognizer.train(images, np.array(labels))
 
 
 
