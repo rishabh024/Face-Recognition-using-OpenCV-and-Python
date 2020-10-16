@@ -40,7 +40,11 @@ def getFacesAndLabels(datapath):
             images.append(image[y: y + h, x: x + w])
             labels.append(label)
 
+            # imshow() method is used to display the image in a window
+            cv2.imshow("add the faces to the training dataset...", image[y: y + h, x: x + w])
+            cv2.waitKey(1)
 
+    return images, labels  # return the image list and label list
 
 
 
