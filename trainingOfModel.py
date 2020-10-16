@@ -20,7 +20,10 @@ def getFacesAndLabels(datapath):
     images = []  # images will contain the face images
     labels = []  # labels will contains the label that is assigned to the image
 
+    for image_path in imagePaths:
 
+        # read the image from the dataset and convert it to the grayscale image using mode "L" and return the converted copy of this image
+        grayScaleImageUsingPIL = Image.open(image_path).convert('L')
 
 
 
