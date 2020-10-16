@@ -50,7 +50,6 @@ images, labels = getFacesAndLabels(dataPath)
 recognizer.train(images, np.array(labels))
 
 
-
-
-
+# now, model is saved using recognizer.save() method
+recognizer.save(projectPath + '/model.yml')
 
