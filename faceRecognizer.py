@@ -19,7 +19,12 @@ while True:
     # color of frame is converted to gray color by using COLOR_BGR2GRAY property
     grayFrame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
+    # now, faces are detected by using detectMultiScale() method
+    faces = faceClassifier.detectMultiScale(grayFrame, scaleFactor=1.2, minNeighbors=5, minSize=(100, 100))
 
+    for (x, y, w, h) in faces:
+        labelPredicted, conf = recognizer.predict(grayFrame[y:y + h, x:x + w])
+        cv2.rectangle(frame, (x - 50, y - 50), (x + w + 50, y + h + 50), (225, 0, 0), 2)
 
 
 
