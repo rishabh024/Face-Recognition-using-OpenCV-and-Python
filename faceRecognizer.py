@@ -7,7 +7,7 @@ projectPath = os.path.dirname(os.path.abspath(__file__))
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 
 # now, trained model is used to recognise the face of person
-recognizer.read(projectPath + '/model.yml')
+recognizer.read(projectPath + '/faceRecognitionModel.yml')
 faceClassifier = cv2.CascadeClassifier(projectPath + '/haarcascade_frontalface_default.xml')
 
 camera = cv2.VideoCapture(0)
