@@ -35,3 +35,9 @@ while True:
 
         # imshow() method is used to show the frames in the window
         cv2.imshow('frame', frame[y - size: y + h + size, x - size: x + w + size])
+
+        # waitKey(1) will wait for key press for one millisecond and it will continue to read frame by using camera.read()
+        if (cv2.waitKey(1) == 10 or count >= 40):  # if enter key is pressed or if no of images >= 80 then break the loop
+            break
+
+
