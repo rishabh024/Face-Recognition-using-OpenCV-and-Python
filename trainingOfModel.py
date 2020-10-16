@@ -14,3 +14,29 @@ faceClassifier = cv2.CascadeClassifier(cascadePath)
 dataPath = projectPath + '/trainingDataset'
 
 def getFacesAndLabels(datapath):
+
+    imagePaths = [os.path.join(datapath, f) for f in os.listdir(datapath)]
+
+    images = []  # images will contain the face images
+    labels = []  # labels will contains the label that is assigned to the image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
