@@ -32,7 +32,8 @@ def getFacesAndLabels(datapath):
         label = int(os.path.split(image_path)[1].split(".")[0].replace("face-", ""))
         print('Label-' + str(label))
 
-
+        # now, faces are detected by using detectMultiScale() method
+        faces = faceClassifier.detectMultiScale(image)
 
 
 
