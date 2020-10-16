@@ -22,6 +22,12 @@ while True:
     # now, faces are detected by using detectMultiScale() method and stored in the faces variable
     faces = faceClassifier.detectMultiScale(grayFrame, scaleFactor=1.2, minNeighbors=5, minSize=(100, 100))
 
+    # x,y,w,h are 4 cordinates which are used to describe the detected face by drawing the rectangle on the image
+    for (x, y, w, h) in faces:
+        count += 1
 
+        # now, image dataset is formed with the help of captured frames
+        cv2.imwrite("trainingDataset/face-" + name + "." + str(count) + ".jpg", grayFrame[y - size:y + h + size, x - size:x + w + size])
+        cv2.rectangle(frame, (x - size, y - size), (x + w + size, y + h + size), (225, 0, 0), 2)
 
 
