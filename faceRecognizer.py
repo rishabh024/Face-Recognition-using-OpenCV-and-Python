@@ -10,7 +10,7 @@ recognizer = cv2.face.LBPHFaceRecognizer_create()
 recognizer.read(projectPath + '/model.yml')
 faceClassifier = cv2.CascadeClassifier(projectPath + '/haarcascade_frontalface_default.xml')
 
-
+camera = cv2.VideoCapture(0)
 
 
 
